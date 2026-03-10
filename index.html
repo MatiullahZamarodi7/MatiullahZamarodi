@@ -1,0 +1,2014 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matiullah Zamarodi - Full Stack Developer Portfolio</title>
+    <!-- External Scripts and Fonts -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="/_sdk/element_sdk.js"></script>
+    <link rel="stylesheet" href="protfolio.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full overflow-auto">
+    <!-- ================================================
+         NAVIGATION
+         ================================================ -->
+    <nav class="nav-container" id="navbar">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#home" class="font-display text-2xl font-bold neon-text-gold">
+          Z<sup>9</sup>GPS
+        </a>
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center gap-2">
+          <a href="#home" class="nav-link">Home 🏠</a>
+          <a href="#about" class="nav-link">About ℹ️</a>
+          <a href="#skills" class="nav-link">Skills ⚙️</a>
+          <a href="#projects" class="nav-link">Projects 📁</a>
+          <a href="#experience" class="nav-link">Experience 💼</a>
+          <a href="#contact" class="nav-link">Contact 📧</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden text-2xl"
+          id="mobileMenuBtn"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden mt-4 glass-panel p-4" id="mobileMenu">
+        <a href="#home" class="block py-2 nav-link">Home 🏠</a>
+        <a href="#about" class="block py-2 nav-link">About ℹ️</a>
+        <a href="#skills" class="block py-2 nav-link">Skills ⚙️</a>
+        <a href="#projects" class="block py-2 nav-link">Projects 📁</a>
+        <a href="#experience" class="block py-2 nav-link">Experience 💼</a>
+        <a href="#contact" class="block py-2 nav-link">Contact 📧</a>
+      </div>
+    </nav>
+    <!-- ================================================
+         HERO SECTION
+         ================================================ -->
+    <section class="hero-section" id="home">
+      <!-- Background Orbs -->
+      <div class="hero-background">
+        <div class="hero-orb hero-orb-1 animate-float"></div>
+        <div class="hero-orb hero-orb-2 animate-float-delayed"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <!-- Floating Shapes -->
+        <div
+          class="floating-shape shape-circle animate-float"
+          style="top: 20%; left: 10%"
+        ></div>
+        <div
+          class="floating-shape shape-square animate-float-delayed"
+          style="top: 60%; left: 85%"
+        ></div>
+        <div
+          class="floating-shape shape-triangle animate-float"
+          style="top: 80%; left: 20%"
+        ></div>
+        <div
+          class="floating-shape shape-circle animate-float-delayed"
+          style="top: 30%; right: 15%"
+        ></div>
+      </div>
+      <!-- Hero Content -->
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <!-- Greeting -->
+        <p
+          class="font-mono text-lg mb-4 animate-fade-up nav-link"
+          style="color: var(--color-primary)"
+        >
+          &lt; Hello World /&gt;
+        </p>
+        <!-- Name -->
+        <h1
+          class="font-display text-5xl md:text-7xl font-black mb-6 animate-fade-up"
+          style="animation-delay: 0.2s"
+          id="heroName"
+        >
+          <span class="gradient-text animate-gradient" id="animation_2" >Matiullah Zamarodi</span>
+        </h1>
+        <!-- Title with Typing Effect -->
+        <div
+          class="text-2xl md:text-3xl font-semibold mb-6 animate-fade-up"
+        >
+          <span id="heroTitle">Full Stack Developer</span>
+        </div>
+        <!-- Subtitle -->
+        <p
+          class="text-xl md:text-2xl opacity-80 mb-10 max-w-2xl mx-auto animate-fade-up text-balance"
+          style="animation-delay: 0.6s"
+          id="heroSubtitle"
+        >
+          Crafting digital experiences with clean code, innovative solutions,
+          and a passion for excellence.
+        </p>
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
+          style="animation-delay: 0.8s"
+        >
+          <a href="#projects" class="btn-primary font-display btn-neon">
+            View My Work
+          </a>
+          <a href="#contact" class="btn-secondary font-display btn-neon">
+            Get In Touch
+          </a>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="mt-16 animate-fade-up" style="animation-delay: 1s">
+          <a href="#about" class="inline-block animate-float">
+            <svg
+              width="40"
+              height="40"
+              viewbox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="color: var(--color-primary)"
+            >
+              <path d="M12 5v14M5 12l7 7 7-7" /></svg
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- ================================================
+         ABOUT SECTION
+         ================================================ -->
+    <section class="section" id="about">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="section-title font-display">
+          <span class="gradient-text">About Me ℹ️</span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Profile Image/Avatar -->
+          <div class="flex justify-center animate-slide-left">
+            <div class="relative">
+              <div
+                class="w-72 h-72 rounded-full neon-border-gold p-2 animate-pulse-glow"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-gradient-to-br from-purple-600 to-amber-500 flex items-center justify-center"
+                >
+                  <i
+                    ><img
+                      class=""
+                      style="width: 300px; height: 270px; border-radius: 9999px"
+                      src="img/matiullah.jpg"
+                      alt=""
+                  /></i>
+                </div>
+              </div>
+              <!-- Decorative Elements -->
+              <div
+                class="absolute -top-4 -right-4 w-20 h-20 rounded-full border-2 border-dashed animate-orbit"
+                style="border-color: var(--color-secondary)"
+              ></div>
+            </div>
+          </div>
+          <!-- About Content -->
+          <div class="glass-panel p-8 animate-slide-right">
+            <h3 class="font-display text-2xl font-bold mb-4 neon-text-gold nav-link">
+              Who I Am
+            </h3>
+            <p
+              class="text-lg leading-relaxed mb-6 opacity-90"
+              style="direction: rtl ; font-family: 'Vazir', monospace;"
+              id="aboutText"
+            >
+              من مطیع‌الله زمردی هستم، متولد ۱۳۸۶ در ولایت پروان، افغانستان 🇦🇫✨
+              دانشجوی رشتهٔ کمپیوتر ساینس دیپارتمنت تکنولوژی معلوماتی هستم یک
+              Full Stack Developer پرشور با تخصص در طراحی و توسعه وب، علاقه‌مند
+              به هوش مصنوعی، شبکه، امنیت وب و کسب‌وکار آنلاین 💻🔥 با مهارت در
+              HTML، CSS، JavaScript، PHP، MySQL و فریم‌ورک‌هایی مانند Laravel و
+              React، تجربه‌های دیجیتال یکپارچه خلق می‌کنم که طراحی زیبا را با
+              عملکرد قدرتمند ترکیب می‌کند 🚀 فعلاً مشغول یادگیری پیشرفته
+              برنامه‌نویسی، پروژه‌های عملی و تقویت مهارت‌های خود در طراحی وب و
+              شبکه هستم و با انگیزهٔ زیاد در حال آماده شدن برای کارهای حرفه‌ای و
+              ایجاد پروژه‌های واقعی می‌باشم 🌍✨ من به یادگیری مداوم، همکاری در
+              پروژه‌های خلاقانه و تأثیرگذاری مثبت در دنیای تکنولوژی باور دارم و
+              همیشه آمادهٔ رشد و تجربه‌های جدید هستم 💡🏏
+            </p>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+              من باور دارم که هر خط کد فرصتی است برای خلق ایده‌ها و حل مشکلات
+              پیچیده 🚀 چالش‌ها برای من انگیزه‌اند و هر پروژه، راهی برای
+              یادگیری، رشد و ارتقای مهارت‌هایم محسوب می‌شود 💻✨ با اشتیاق و
+              پشتکار، همیشه آماده‌ام تا در پروژه‌های خلاقانه شرکت کنم و تأثیری
+              مثبت در دنیای تکنولوژی بگذارم 🌍🔥
+            </p>
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-4 mt-8">
+              <div class="text-center glass-panel-light p-4" id="card">
+                <div class="font-display text-3xl font-bold neon-text-gold">
+                  2+
+                </div>
+                <div class="text-sm opacity-70">Years Experience</div>
+              </div>
+              <div class="text-center glass-panel-light p-4" id="card">
+                <div class="font-display text-3xl font-bold neon-text-purple">
+                  20+
+                </div>
+                <div class="text-sm opacity-70">Projects Done</div>
+              </div>
+              <div class="text-center glass-panel-light p-4" id="card">
+                <div class="font-display text-3xl font-bold neon-text-cyan">
+                  100+
+                </div>
+                <div class="text-sm opacity-70">Soon to have Happy Clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================================
+         SKILLS SECTION
+         ================================================ -->
+    <section
+      class="section"
+      id="skills"
+      style="
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(168, 85, 247, 0.05),
+          transparent
+        );
+      "
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2 class="section-title font-display">
+          <span class="gradient-text">Technical Skills</span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Frontend Skills -->
+          <div class="glass-panel p-8 ">
+            <h3
+              class="font-display text-xl font-bold mb-6 flex items-center gap-3"
+            >
+              <span class="text-3xl">🎨</span>
+              <span class="neon-text-gold nav-link">Frontend Development</span>
+            </h3>
+            <!-- Skill Items -->
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">HTML5 / CSS3</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-primary)"
+                    >90%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="--fill-width: 90%; width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">BootStrap</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-primary)"
+                    >60%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="--fill-width: 60%; width: 60%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">JavaScript</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-primary)"
+                    >70%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="--fill-width: 70%; width: 70%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Tailwind CSS / SASS</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-primary)"
+                    >40%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="--fill-width: 40%; width: 40%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Backend Skills -->
+          <div class="glass-panel p-8">
+            <h3
+              class="font-display text-xl font-bold mb-6 flex items-center gap-3"
+            >
+              <span class="text-3xl">⚙️</span>
+              <span class="neon-text-purple nav-link">Backend Development</span>
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">PHP</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >80%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 80%;
+                      width: 80%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Laravel</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >60%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 60%;
+                      width: 60%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">MySQL</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >85%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 85%;
+                      width: 85%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Java</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >40%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 40%;
+                      width: 40%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Python</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >30%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 30%;
+                      width: 30%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <!-- networks -->
+          <div class="glass-panel p-8">
+            <h3
+              class="font-display text-xl font-bold mb-6 flex items-center gap-3"
+            >
+              <span class="text-3xl">🌐</span>
+              <span class="neon-text-purple nav-link">Network Development</span>
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Fundamentals of network</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >100%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 100%;
+                      width: 100%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="flex justify-between mb-1">
+                  <span class="font-semibold">A+</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >80%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 80%;
+                      width: 80%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Natwork +</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >100%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 100%;
+                      width: 100%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">CCNA</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >80%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 80%;
+                      width: 80%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">CCNP</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >40%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 40%;
+                      width: 40%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- security -->
+          <div class="glass-panel p-8">
+            <h3
+              class="font-display text-xl font-bold mb-6 flex items-center gap-3"
+            >
+              <span class="text-3xl">🔒</span>
+              <span class="neon-text-purple nav-link">Security Development</span>
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Security +</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >60%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 60%;
+                      width: 60%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Linux Essintional</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >90%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 90%;
+                      width: 90%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">LPIC 1</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >40%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 40%;
+                      width: 40%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+                </div>
+                
+              </div>
+            <!-- ICDL -->
+          <div class="glass-panel p-8">
+            <h3
+              class="font-display text-xl font-bold mb-6 flex items-center gap-3"
+            >
+              <span class="text-3xl">🖥️</span>
+              <span class="neon-text-purple nav-link">ICDL</span>
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Windows</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >85%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 85%;
+                      width: 85%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Word</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >95%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 95%;
+                      width: 95%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Exel</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >80%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 80%;
+                      width: 80%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">power Point</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >90%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 90%;
+                      width: 90%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Access</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >40%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 40%;
+                      width: 40%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+           <!-- Graphices Design -->
+          <div class="glass-panel p-8 ">
+            <h3
+              class="font-display text-xl font-bold mb-6 flex items-center gap-3"
+            >
+              <span class="text-3xl">🖌️</span>
+              <span class="neon-text-purple nav-link">Graphices Design </span>
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">PhotoShap</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >70%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 70%;
+                      width: 70%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="flex justify-between mb-1">
+                  <span class="font-semibold">CoralDrow</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >30%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 30%;
+                      width: 30%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Dia</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >80%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 80%;
+                      width: 80%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Packit Trecer</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-secondary)"
+                    >70%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="
+                      --fill-width: 70%;
+                      width: 70%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--color-secondary),
+                        var(--color-pink)
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tech Stack Badges -->
+        <div class="mt-12">
+          <h3 class="text-center font-display text-xl mb-8 opacity-80">
+            Technologies I Work With
+          </h3>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="tech-badge glass-panel-light neon-border-gold">
+              <span>🟨</span> JavaScript
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-purple">
+              <span>🅱️</span> BootStrap
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-cyan">
+              <span>🐬</span> MySQL
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-gold">
+              <span>📄</span> HTML / Css
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-purple">
+              <span>🔺</span> Laravel
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-cyan">
+              <span>🐘</span> PHP
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-gold">
+              <span>📦</span> Npm/Redux
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-purple">
+              <span>🌐</span> Networks
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-cyan">
+              <span>📦</span> Git/GitHub
+            </span>
+            <span class="tech-badge glass-panel-light neon-border-gold">
+              <span>🎨</span> Figma
+            </span>
+             <span class="tech-badge glass-panel-light neon-border-purple">
+              <span>🐧</span> linux
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- ================================================
+         PROJECTS SECTION
+         ================================================ -->
+    <section class="section" id="projects">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="section-title font-display">
+          <span class="gradient-text">Featured Projects</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #1a0a2e, #3b0764)"
+            >
+              <span><i><img src="img/karyab.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
+                karyab Platform
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                With this website you can find your own worker and your fivorite jobs
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(14, 68, 155, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >PHP</span>
+                  <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(15, 168, 43, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >MySQL</span>
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                  <a href="https://karyab.page.gd">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/karyab-online-platform">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #0a1628, #1e3a5f)"
+            >
+              <span><i><img src="img/todo-img.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-purple">
+                Todo List by laravel
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the todo list and this is the best for who wnat save there works
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                 <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(93, 38, 94, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(159, 35, 35, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >laravel</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >MySQL</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                                  <a href="https://github.com/MatiullahZamarodi7/Todo-List-by-Laravel/blob/master/todo-img.png">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                    
+                   <a href="https://github.com/MatiullahZamarodi7/Todo-List-by-Laravel">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+             <!-- Project 2 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #0a1628, #1e3a5f)"
+            >
+              <span><i><img src="img/todo.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-purple">
+                Todo List by php
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                عwith this website we can write our all task to we did or my we do
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                 <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(93, 38, 94, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(159, 35, 35, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >PHP</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >MySQL</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                                  <a href="https://github.com/MatiullahZamarodi7/Todo-List-by-PHP/blob/master/img.png">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/Todo-List-by-PHP">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+              <!-- Project 2 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #0a1628, #1e3a5f)"
+            >
+              <span><i><img src="img/img-of-todo-js.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-purple">
+                Todo List by just js
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                عwith this website we can write our all task to we did or my we do for all day and month
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+     
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >JavaScript</span
+                >
+              
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                                  <a href="https://matiullahzamarodi7.github.io/Todo-List-by-js/">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/Todo-List-by-js">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #1a0f0a, #4a2c17)"
+            >
+              <span><i><img src="img/musicPlayer.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-cyan">
+                MusicPlayer
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the musicPlayer we can lesten our fivorate musicPlayer in this player
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                 <a href="">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  GitHub →
+                </button>
+              </div>
+            </div>
+          </div>
+             <!-- Project 3 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #1a0f0a, #4a2c17)"
+            >
+              <span><i><img src="img/player.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-cyan">
+                MusicPlayer
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the musicPlayer we can lesten our fivorate musicPlayer in this player
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                 <a href="https://matiullahzamarodi7.github.io/music-player/">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                    <a href="https://github.com/MatiullahZamarodi7/music-player">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #0f1a0a, #1a4a17)"
+            >
+              <span><i><img src="img/Clock (2).png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
+                Dinamic Clock
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the clock and this the local project this create with javascript
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                <a href="https://matiullahzamarodi7.github.io/dy-clock/">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  
+                    <a href="https://github.com/MatiullahZamarodi7/dy-clock">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #1a1a2e, #2e2e5f)"
+            >
+              <span><i><img src="img/payment.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-purple">
+                payments Card
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the type of the payment card to we can pay for everything this use at bank ...
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                 <a href="https://matiullahzamarodi7.github.io/pymentKard/">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  
+                    
+                    <a href="https://github.com/MatiullahZamarodi7/pymentKard/tree/master">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #2e1a1a, #5f2e2e)"
+            >
+              <span><i><img src="img/temp.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-cyan">
+                Tempreture Changer
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this the Tempreture change this can change the farnHid to selsuse easy
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                 <a href="https://matiullahzamarodi7.github.io/tempreature-app/">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/tempreature-app?tab=readme-ov-file"> GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
+           <!-- Project 7 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #2e1a1a, #5f2e2e)"
+            >
+              <span><i><img src="img/clock.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
+                clock
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the local clock and we can watch the own time in there
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTNL CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >javascript</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                <a href="https://matiullahzamarodi7.github.io/time-clock/">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                    <a href="https://github.com/MatiullahZamarodi7/time-clock"> GitHub →</a>
+                    
+                </button>
+              </div>
+            </div>
+          </div>
+           <!-- Project 8 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #2e1a1a, #5f2e2e)"
+            >
+              <span><i><img src="img/watchStore.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-cyan">
+                watchStore
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this is the watching store and we can take the clock and pay for that the most stor
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                <a href="">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  GitHub →
+                </button>
+              </div>
+            </div>
+          </div>
+           <!-- Project 9 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #2e1a1a, #5f2e2e)"
+            >
+              <span><i><img src="img/card.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-purple">
+                the logging card
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                this the responsive logging page we use this in our websites
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                <a href="">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  GitHub →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================================
+         EXPERIENCE SECTION
+         ================================================ -->
+    <section
+      class="section"
+      id="experience"
+      style="
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(251, 191, 36, 0.03),
+          transparent
+        );
+      "
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2 class="section-title font-display">
+          <span class="gradient-text">Work Experience</span>
+        </h2>
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="glass-panel p-6">
+              <div
+                class="flex flex-col md:flex-row md:items-center md:justify-between mb-3"
+              >
+                <h3 class="font-display text-xl font-bold neon-text-gold nav-link">
+                  Junior Full Stack Developer
+                </h3>
+                <span class="font-mono text-sm opacity-70 nav-link">2025 - Present</span>
+              </div>
+              <p
+                class="text-lg font-semibold mb-3"
+                style="color: var(--color-secondary)"
+              >
+                TechCorp Solutions
+              </p>
+              <ul class="space-y-2 opacity-90" style="direction: rtl; font-weight: bold; font-size: medium; font-family: 'Vazir', monospace;">
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-primary)">▹</span >
+                  توسعه فرانت‌اند و بک‌اند: مهارت در زبان‌ها و  فریم‌ورک‌هایی  مثل JavaScript، Node.js، Laravel، React یا Vue برای  ساخت  برنامه‌های  مقیاس‌ پذیر و کاربرپسند.
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-primary)">▹</span> 
+                  معماری و بهینه‌سازی: طراحی سیستم‌ها به شکل قابل توسعه، پایدار و سریع، شامل معماری میکروسرویس و بهینه‌سازی دیتابیس
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-primary)">▹</span>
+                  DevOps و تحویل سریع: آشنایی با CI/CD، Docker و Git برای استقرار سریع و بدون مشکل برنامه‌ها.
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-primary)">▹</span>
+                  توسعه همزمان فرانت‌اند و بک‌اند با استفاده از تکنولوژی‌های مدرن
+                </li>
+                 <li class="flex items-start gap-2">
+                  <span style="color: var(--color-primary)">▹</span>
+                  در کل، Senior Full Stack Developer نه تنها کدنویس حرفه‌ای است، بلکه راه‌حل‌های استراتژیک و پایدار برای پروژه‌ها ایجاد می‌کند و نقش کلیدی در موفقیت تیم و محصول دارد. 🚀
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="glass-panel p-6">
+              <div
+                class="flex flex-col md:flex-row md:items-center md:justify-between mb-3"
+              >
+                <h3 class="font-display text-xl font-bold neon-text-purple nav-link">
+                 Junior Network architecture 
+                </h3>
+                <span class="font-mono text-sm opacity-70 nav-link">2024 - Present</span>
+              </div>
+              <p
+                class="text-lg font-semibold mb-3"
+                style="color: var(--color-accent)"
+              >
+                Global Network Solutions
+              </p>
+              <ul class="space-y-2 opacity-90" style="direction: rtl; font-weight: bold; font-size: medium; font-family: 'Vazir', monospace;">
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-secondary)">▹</span> 
+                  طراحی شبکه‌های امن، پایدار و مقیاس‌پذیر با استفاده از LAN، WAN، VPN، و Cloud Networking
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-secondary)">▹</span>
+                  بهینه‌سازی عملکرد شبکه و مدیریت ترافیک، پهنای باند و امنیت
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-secondary)">▹</span> 
+                  هدایت تیم شبکه، ارائه راهنمایی فنی و منتورینگ مهندسین شبکه جوان
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-secondary)">▹</span> 
+                 در کل، Senior Network Architect تضمین می‌کند که شبکه سازمان قابل اعتماد، امن و آماده برای آینده باشد و نقش کلیدی در موفقیت عملیات فناوری اطلاعات دارد. 🌐
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Experience 3 -->
+          <div class="timeline-item">
+            <div class="glass-panel p-6">
+              <div
+                class="flex flex-col md:flex-row md:items-center md:justify-between mb-3"
+              >
+                <h3 class="font-display text-xl font-bold neon-text-cyan nav-link">
+                  Junior securitys Es
+                </h3>
+                <span class="font-mono text-sm opacity-70 nav-link">2024 - Present</span>
+              </div>
+              <p
+                class="text-lg font-semibold mb-3"
+                style="color: var(--color-success)"
+              >
+                Global Security Technologies
+              </p>
+              <ul class="space-y-2 opacity-90" style="direction: rtl; font-weight: bold; font-size: medium; font-family: 'Vazir', monospace;">
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-accent)">▹</span> طراحی و اجرای راهکارهای امنیتی مانند Firewall، IDS/IPS، SIEM و Endpoint Security
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-accent)">▹</span> 
+                  شناسایی و تحلیل آسیب‌پذیری‌ها و انجام Penetration Testing برای جلوگیری از حملات
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-accent)">▹</span> 
+                  مدیریت حوادث امنیتی (Incident Response) و بررسی رخدادهای مشکوک
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-accent)">▹</span> 
+                  تدوین سیاست‌های امنیتی و آموزش تیم‌ها برای افزایش آگاهی امنیتی
+                </li>
+                <li class="flex items-start gap-2">
+                  <span style="color: var(--color-accent)">▹</span> 
+                  شناسایی و تحلیل حملات سایبری و اجرای راهکارهای دفاعی پیشرفته
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================================
+         CONTACT SECTION
+         ================================================ -->
+    <section class="section" id="contact">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="section-title font-display">
+          <span class="gradient-text">Get In Touch</span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Contact Info -->
+          <div class="glass-panel p-8">
+            <h3 class="font-display text-2xl font-bold mb-6 neon-text-gold">
+              Let's Connect
+            </h3>
+            <p class="opacity-90 mb-8">
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your vision.
+            </p>
+            <!-- Contact Details -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center neon-border-gold"
+                >
+                  <span class="text-xl">📧</span>
+                </div>
+                <div>
+                  <p class="text-sm opacity-70">Email</p>
+                  <p class="font-semibold" id="contactEmail">
+                    zamarodimatiullah@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center neon-border-purple"
+                >
+                  <span class="text-xl">📍</span>
+                </div>
+                <div>
+                  <p class="text-sm opacity-70">Location</p>
+                  <p class="font-semibold" id="contactLocation">
+                    Kabul, Afghanistan
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center neon-border-cyan"
+                >
+                  <span class="text-xl">💼</span>
+                </div>
+                <div>
+                  <p class="text-sm opacity-70">Status</p>
+                  <p class="font-semibold" style="color: var(--color-success)">
+                    studing right now.....
+                  </p>
+                </div>
+              </div>
+                 <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center neon-border-cyan"
+                >
+                  <span class="text-xl">📚</span>
+                </div>
+                <div>
+                  <p class="text-sm opacity-70">study position</p>
+                  <p class="font-semibold" style="color: var(--color-success)">
+                    self study .....
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Social Links -->
+            <div class="mt-8">
+              <p class="text-sm opacity-70 mb-4">Follow Me</p>
+              <div class="flex gap-2 flex-wrap mobile">
+                <a href="https://www.facebook.com/Matiullah Zamarodi" class="social-link " aria-label="facebook">
+                  <span><i class="fa-brands fa-facebook-f text-yellow-400 text-2x2"></i></span>
+                </a>
+                <a href="https://www.instagram.com/im_matiullah_0093/" class="social-link" aria-label="instagram">
+                  <span><i class="fa-brands fa-instagram text-yellow-400 text-2xl"></i></span>
+                </a>
+                <a href="https://www.linkedin.com/in/Zamarodi Matiullah/" class="social-link" aria-label="linkedin">
+                  <span><i class="fa-brands fa-linkedin-in text-yellow-400 text-2xl"></i></span>
+                </a>
+                <a href="https://wa.me/93777436799" class="social-link" aria-label="whatsup">
+                  <span><i class="fa-brands fa-whatsapp text-yellow-400 text-2xl"></i></span>
+                </a>
+               <a href="https://github.com/MatiullahZamarodi7" class="social-link" aria-label="github">
+                  <span><i class="fa-brands fa-github text-yellow-400 text-2xl"></i></span>
+                </a>
+                  <a href="https://twitter.com/MatiullahZamarodi" class="social-link" aria-label="github">
+                  <i class="fa-brands fa-twitter text-yellow-400 text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Form -->
+          <div class="glass-panel p-8">
+            <h3 class="font-display text-2xl font-bold mb-6 neon-text-purple">
+              Send a Message
+            </h3>
+            <form id="contactForm" class="space-y-5">
+              <div>
+                <label for="name" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="mati"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="zamarodimatiullah@gmail.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Project Inquiry"
+                />
+              </div>
+              <div>
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="form-input"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full font-display">
+                Send Message 🚀
+              </button>
+            </form>
+            <!-- Success Message (Hidden by default) -->
+            <div
+              id="successMessage"
+              class="hidden mt-4 p-4 rounded-lg text-center"
+              style="
+                background: rgba(74, 222, 128, 0.2);
+                border: 1px solid var(--color-success);
+              "
+            >
+              <p class="font-semibold" style="color: var(--color-success)">
+                ✓ Message sent successfully!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================================
+         FOOTER
+         ================================================ -->
+    <footer class="py-8 text-center" style="background: rgba(10, 10, 15, 0.8)">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="font-display text-xl font-bold mb-2 neon-text-gold nav-link ">
+          Matiullah Zamarodi
+        </p>
+        <p class="opacity-70 mb-4 nav-link">Full Stack Developer</p>
+        <p class="text-sm opacity-50">
+          © 2026 copy right
+        </p>
+      </div>
+    </footer>
+    <!-- ================================================
+         JAVASCRIPT
+         ================================================ -->
+         <script src="protfolio.js"></script>
+  </body>
+</html>

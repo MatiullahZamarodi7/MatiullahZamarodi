@@ -1,0 +1,824 @@
+
+.btn-neon {
+    position: relative;
+    padding: 12px 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #ffdf00;
+    background: transparent;
+    color: #ffdf00;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.btn-neon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ffdf00;
+    transition: left 0.3s;
+    z-index: -1;
+}
+
+.btn-neon:hover {
+    color: #000;
+}
+
+.btn-neon:hover::before {
+    left: 0;
+}
+
+
+#animation_2 {
+     display: inline-block;
+     overflow: hidden;
+     white-space: nowrap;
+     border-right: 3px solid yellow;
+     width: 0%;
+     animation: typing_2 5s steps(31, end) forwards,
+         blink-caret 0.8s step-end infinite;
+ }
+
+@media (max-width: 768px) {
+  #animation_2 {
+    /* animation: none;      انیمیشن خاموش */
+    width: 100%;          /* متن کامل نمایش داده شود */
+    border-right: none;   /* خط چشمک زن حذف شود */
+    white-space: normal;  /* اگر متن طولانی بود بشکند */
+  }
+}
+
+ @keyframes typing_2 {
+     from {
+         width: 0
+     }
+
+     to {
+         width: 100%
+     }
+ }
+
+ @keyframes blink-caret {
+
+     from,
+     to {
+         border-color: transparent
+     }
+
+     50% {
+         border-color: yellow
+     }
+ }
+
+
+
+
+/* ================================================
+           CSS VARIABLES - Easy to customize colors
+           ================================================ */
+:root {
+    --color-background: #0a0a0f;
+    --color-surface: #12121a;
+    --color-text: #e8e8f0;
+    --color-primary: #fbbf24;
+    --color-secondary: #a855f7;
+    --color-accent: #22d3ee;
+    --color-success: #4ade80;
+    --color-pink: #f472b6;
+}
+
+/* ================================================
+           RESET & BASE STYLES
+           ================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    color: var(--color-text);
+    background: linear-gradient(135deg,
+            var(--color-background) 0%,
+            #1a0a2e 30%,
+            #0f0a1a 70%,
+            var(--color-background) 100%);
+    line-height: 1.6;
+}
+
+/* ================================================
+           FONT CLASSES
+           ================================================ */
+.font-display {
+    font-family: "Orbitron", sans-serif;
+}
+
+.font-mono {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+/* ================================================
+           CUSTOM SCROLLBAR
+           ================================================ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            var(--color-primary),
+            var(--color-secondary));
+    border-radius: 10px;
+    border: 2px solid var(--color-background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            var(--color-secondary),
+            var(--color-primary));
+}
+
+/* ================================================
+           ANIMATIONS - Keyframes
+           ================================================ */
+
+/* Floating animation for decorative elements */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Glowing pulse effect */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px var(--color-primary),
+            0 0 40px rgba(251, 191, 36, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px var(--color-primary),
+            0 0 60px rgba(251, 191, 36, 0.5);
+    }
+}
+
+/* Text gradient animation */
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Slide in from left */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from right */
+@keyframes slide-in-right {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade in up */
+@keyframes fade-in-up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Typing cursor blink */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Skill bar fill animation */
+@keyframes fill-bar {
+    from {
+        width: 0%;
+    }
+}
+
+/* Orbit rotation for decorative elements */
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+/* ================================================
+           ANIMATION UTILITY CLASSES
+           ================================================ */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+}
+
+.animate-slide-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-fade-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-orbit {
+    animation: orbit 20s linear infinite;
+}
+
+/* ================================================
+           GLASS MORPHISM PANELS
+           ================================================ */
+.glass-panel {
+    background: rgba(18, 18, 26, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(251, 191, 36, 0.15);
+    border-radius: 20px;
+}
+
+.glass-panel-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}
+
+/* ================================================
+           NEON BORDER EFFECTS
+           ================================================ */
+.neon-border-gold {
+    border: 2px solid var(--color-primary);
+    box-shadow:
+        0 0 15px rgba(251, 191, 36, 0.4),
+        inset 0 0 15px rgba(251, 191, 36, 0.1);
+}
+
+.neon-border-purple {
+    border: 2px solid var(--color-secondary);
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.4),
+        inset 0 0 15px rgba(168, 85, 247, 0.1);
+}
+
+.neon-border-cyan {
+    border: 2px solid var(--color-accent);
+    box-shadow:
+        0 0 15px rgba(34, 211, 238, 0.4),
+        inset 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+/* ================================================
+           NEON TEXT EFFECTS
+           ================================================ */
+.neon-text-gold {
+    color: var(--color-primary);
+    text-shadow:
+        0 0 10px var(--color-primary),
+        0 0 20px var(--color-primary),
+        0 0 40px rgba(251, 191, 36, 0.5);
+}
+
+.neon-text-purple {
+    color: var(--color-secondary);
+    text-shadow:
+        0 0 10px var(--color-secondary),
+        0 0 20px var(--color-secondary);
+}
+
+.neon-text-cyan {
+    color: var(--color-accent);
+    text-shadow:
+        0 0 10px var(--color-accent),
+        0 0 20px var(--color-accent);
+}
+
+/* ================================================
+           GRADIENT TEXT
+           ================================================ */
+.gradient-text {
+    background: linear-gradient(135deg,
+            var(--color-primary) 0%,
+            var(--color-secondary) 50%,
+            var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================================================
+           BUTTON STYLES
+           ================================================ */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), #f59e0b);
+    color: var(--color-background);
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 12px;
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-background);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+/* ================================================
+           NAVIGATION STYLES
+           ================================================ */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 40px;
+    transition: all 0.3s ease;
+}
+
+.nav-container.scrolled {
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 15px 40px;
+}
+
+.nav-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* ================================================
+           SECTION STYLES
+           ================================================ */
+.section {
+    padding: 100px 20px;
+    position: relative;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* ================================================
+           HERO SECTION SPECIFIC
+           ================================================ */
+.hero-section {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+}
+
+.hero-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-secondary);
+    top: -100px;
+    right: -100px;
+}
+
+.hero-orb-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-primary);
+    bottom: -50px;
+    left: -50px;
+}
+
+.hero-orb-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: var(--color-primary);
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+}
+
+/* ================================================
+           SKILL BARS
+           ================================================ */
+.skill-bar-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.skill-bar {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg,
+            var(--color-primary),
+            var(--color-secondary));
+    animation: fill-bar 1.5s ease-out forwards;
+}
+
+/* ================================================
+           PROJECT CARDS
+           ================================================ */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
+    transition: left 0.6s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg,
+            var(--color-surface) 0%,
+            rgba(168, 85, 247, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+/* ================================================
+           TECH STACK BADGES
+           ================================================ */
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    transform: scale(1.05);
+}
+
+/* ================================================
+           TIMELINE STYLES (Experience Section)
+           ================================================ */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg,
+            var(--color-primary) 0%,
+            var(--color-secondary) 50%,
+            var(--color-accent) 100%);
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 3px solid var(--color-background);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* ================================================
+           CONTACT FORM STYLES
+           ================================================ */
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--color-text);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.2);
+}
+
+.form-input::placeholder {
+    color: rgba(232, 232, 240, 0.4);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* ================================================
+           FLOATING DECORATIVE ELEMENTS
+           ================================================ */
+.floating-shape {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.shape-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+}
+
+.shape-square {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--color-secondary);
+    transform: rotate(45deg);
+}
+
+.shape-triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid var(--color-accent);
+}
+
+/* ================================================
+           SOCIAL LINKS
+           ================================================ */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 20px rgba(251, 191, 36, 0.2);
+}
+
+/* ================================================
+           RESPONSIVE DESIGN
+           ================================================ */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 15px 20px;
+    }
+    .mobile{
+        gap:1;
+        flex:wrap;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-orb-1 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-orb-2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-item::before {
+        left: -24px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* ================================================
+           UTILITY CLASSES
+           ================================================ */
+.text-balance {
+    text-wrap: balance;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* -----------------------------------cards hover transition */
+#card:hover {
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+}
