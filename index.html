@@ -13,23 +13,46 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    
-    <style>
-      body {
-        box-sizing: border-box;
-      }
-    </style>
-    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-
-    <!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Icons -->
-<script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
   </head>
+
+
+  <style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+.code-font {
+    font-family: 'Fira Code', monospace;
+    font-size: 23px;
+    color:gold;
+}
+
+#cursor {
+    width: 3px;
+    height: 30px;
+    background: #f0abfc;
+    display: inline-block;
+}
+
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* --------------------------type one------------------------------- */
+
+  </style>
   <body class="h-full overflow-auto">
     <!-- ================================================
          NAVIGATION
@@ -98,11 +121,7 @@
       <!-- Hero Content -->
       <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <!-- Greeting -->
-        <p
-          class="font-mono text-lg mb-4 animate-fade-up nav-link"
-          style="color: var(--color-primary)"
-        >
-          <div
+          <div class="mt-5"
       id="app-wrapper"
       class="h-full w-full flex flex-col items-center justify-center overflow-auto"
     >
@@ -129,7 +148,6 @@
         </div>
       </main>
     </div>
-        </p>
         <!-- Name -->
         <h1
           class="font-display text-5xl md:text-7xl font-black mb-6 animate-fade-up"
@@ -2135,5 +2153,106 @@
          JAVASCRIPT
          ================================================ -->
          <script src="protfolio.js"></script>
+
+
+         <script>
+          
+      // -----------------------------type one----------------------------------
+      const messages = [
+'<Active/>',
+'<Z9-GPS/>',
+'<Coding.../>',
+'< hellow world />'
+];
+
+let messageIndex = 0;
+let charIndex = 0;
+let currentText = "";
+let phase = "typing";
+
+const typedText = document.getElementById("typed-text");
+
+function typeEffect(){
+
+let currentMessage = messages[messageIndex];
+let speed = 100;
+
+if(phase === "typing"){
+
+if(charIndex < currentMessage.length){
+
+currentText = currentMessage.substring(0,charIndex+1);
+charIndex++;
+
+}else{
+
+phase="pause";
+speed=1200;
+
+}
+
+}
+
+else if(phase==="pause"){
+
+phase="deleting";
+speed=400;
+
+}
+
+else if(phase==="deleting"){
+
+if(charIndex>0){
+
+charIndex--;
+currentText=currentMessage.substring(0,charIndex);
+speed=70;
+
+}else{
+
+messageIndex++;
+
+if(messageIndex===messages.length){
+
+messageIndex=messages.length-1;
+phase="final";
+
+}else{
+
+phase="typing";
+
+}
+
+}
+
+}
+
+else if(phase==="final"){
+
+let finalText=messages[messages.length-1];
+
+if(charIndex<finalText.length){
+
+currentText=finalText.substring(0,charIndex+1);
+charIndex++;
+speed=200;
+
+}else{
+
+return;
+
+}
+
+}
+
+typedText.textContent=currentText;
+
+setTimeout(typeEffect,speed);
+
+}
+
+typeEffect();
+    
+         </script>
   </body>
 </html>
