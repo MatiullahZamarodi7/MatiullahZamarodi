@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matiullah Zamarodi - Full Stack Developer Portfolio</title>
+    <meta description="matiullah zamarodi" />
+    <title>Matiullah Zamarodi - مطیع الله زمردی</title>
     <!-- External Scripts and Fonts -->
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,8 +14,113 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   </head>
 
+
+
+
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 24px;   /* کوچکتر شد */
+      height: 24px;  /* کوچکتر شد */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+    }
+    .autoplay-progress span {
+          font-size: 8px;
+         font-weight: bold;
+    }
+
+    .swiper-button-next,
+.swiper-button-prev {
+  width: 28px;
+  height: 28px;
+  transform: scale(0.65);
+  opacity: 0.7;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  transform: scale(0.75);
+}
+
+.swiper-pagination-bullet {
+  background:blue;
+  opacity: 0.6;
+}
+
+.swiper-pagination{
+  position: absolute;
+  top: 60% !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fbbf24; /* طلایی خوشگل 😎 */
+}
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+       width: 24px;
+       height: 24px;
+      stroke-width: 2px; /* نازک‌تر */
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
 
   <style>
     
@@ -50,6 +156,227 @@
 }
 
 
+
+/* ....................downloade cv............... */
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  background-color: transparent;
+  border: 2px solid rgb(91, 91, 240);
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 5px;
+  position: relative;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  transition: all 0.4s ease;
+  border-radius: 100%;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input {
+  display: none;
+}
+
+.label .title {
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  text-align: center;
+}
+
+.label .title:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .circle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: rgb(91, 91, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.label .circle .icon {
+  color: #fff;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle .square {
+  aspect-ratio: 1;
+  width: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #3333a8;
+  width: 100%;
+  height: 0;
+  transition: all 0.4s ease;
+}
+
+.label:has(.input:checked) {
+  width: 57px;
+  animation: installed 0.4s ease 3.5s forwards;
+}
+
+.label:has(.input:checked)::before {
+  animation: rotate 3s ease-in-out 0.4s forwards;
+}
+
+.label .input:checked + .circle {
+  animation:
+    pulse 1s forwards,
+    circleDelete 0.2s ease 3.5s forwards;
+  rotate: 180deg;
+}
+
+.label .input:checked + .circle::before {
+  animation: installing 3s ease-in-out forwards;
+}
+
+.label .input:checked + .circle .icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input:checked ~ .circle .square {
+  opacity: 1;
+  visibility: visible;
+}
+
+.label .input:checked ~ .title {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input:checked ~ .title:last-child {
+  animation: showInstalledMessage 0.4s ease 3.5s forwards;
+}
+
+.label.done {
+  width: 150px;
+  border-color: rgb(35, 174, 35);
+}
+
+@keyframes pulse {
+  0% {
+    scale: 0.95;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    scale: 1;
+    box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+  }
+  100% {
+    scale: 0.95;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes installing {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-90deg) translate(27px) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    transform: rotate(270deg) translate(27px) rotate(270deg);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes installed {
+  100% {
+    width: 150px;
+    border-color: rgb(35, 174, 35);
+  }
+}
+
+@keyframes circleDelete {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes showInstalledMessage {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    right: 56px;
+  }
+}
+
+
+
+
+/* ............................................... */
 /* --------------------------type one------------------------------- */
 
   </style>
@@ -182,6 +509,32 @@
           <a href="#contact" class="btn-secondary font-display btn-neon">
             Get In Touch
           </a>
+          <!-- .................................. -->
+  
+        
+
+  <div class="download-wrapper">
+  <div class="label" id="downloadBtn">
+
+    <input type="checkbox" class="input" id="downloadInput" />
+
+    <span class="circle">
+      <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="1.5"
+          d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+      </svg>
+      <div class="square"></div>
+    </span>
+
+    <p class="title">Download</p>
+    <p class="title">Open</p>
+
+  </div>
+</div>
+
+           <!-- .............................................. -->
         </div>
         <!-- Scroll Indicator -->
         <div class="mt-16 animate-fade-up" style="animation-delay: 1s">
@@ -364,6 +717,22 @@
                   <div
                     class="skill-bar"
                     style="--fill-width: 80%; width: 80%"
+                  ></div>
+                </div>
+              </div>
+               <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">React</span>
+                  <span
+                    class="font-mono text-sm"
+                    style="color: var(--color-primary)"
+                    >70%</span
+                  >
+                </div>
+                <div class="skill-bar-container">
+                  <div
+                    class="skill-bar"
+                    style="--fill-width: 70%; width: 70%"
                   ></div>
                 </div>
               </div>
@@ -1000,6 +1369,9 @@
             <span class="tech-badge glass-panel-light neon-border-gold">
               <span>🟨</span> JavaScript
             </span>
+            <span class="tech-badge glass-panel-light neon-border-gold">
+              <span>⚛️</span> React
+            </span>
             <span class="tech-badge glass-panel-light neon-border-purple">
               <span>🅱️</span> BootStrap
             </span>
@@ -1050,14 +1422,29 @@
               class="project-image"
               style="background: linear-gradient(135deg, #1a0a2e, #3b0764)"
             >
-              <span><i><img src="img/karyab.png" alt=""></i></span>
+                           <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/karyab-page.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/karyab-item.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/about-karyab.png" alt=""></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
             </div>
             <div class="p-6">
               <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
                 karyab Platform
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                With this website you can find your own worker and your fivorite jobs
+                A responsive job portal website called “Karyab” built with modern web technologies to connect job seekers with new opportunities through a user-friendly experience.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1115,20 +1502,118 @@
               </div>
             </div>
           </div>
+          <!-- Project 1 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #1a0a2e, #3b0764)"
+            >
+                           <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/newsPage.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/allNews.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/singlePage.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/adminPanel.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/profilePage.png" alt=""></div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
+                news -> صبح کابل
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                “Sobh Kabul” is a modern news platform designed to share the latest news with a clean user interface, responsive layout, and smooth browsing experience.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(14, 68, 155, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >PHP</span>
+                   <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(14, 68, 155, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >Laravel</span>
+                  <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(15, 168, 43, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >MySQL</span>
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/news---">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/news---">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
           <!-- Project 2 -->
           <div class="project-card glass-panel overflow-hidden">
             <div
               class="project-image"
               style="background: linear-gradient(135deg, #0a1628, #1e3a5f)"
             >
-              <span><i><img src="img/todo-img.png" alt=""></i></span>
+           <span><i><img src="img/todo-img.png" alt=""></i></span>
+
+         
             </div>
             <div class="p-6">
               <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
                 Todo List by laravel
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the todo list and this is the best for who wnat save there works
+                This Laravel-based Todo List application allows users to create, update, delete, and manage tasks easily through a clean and responsive interface.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1189,6 +1674,97 @@
               </div>
             </div>
           </div>
+           <!-- Project 2 -->
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #0a1628, #1e3a5f)"
+            >
+              
+              
+                 <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/f-Page-react.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/all-Card-react.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/cours-page.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/cours2-page.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/single-react.png" alt=""></div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+    </div>
+  </div>
+
+         
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
+                E-Learning Platform (React + API)
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+This project is a full-stack educational platform built with React, REST API, and MySQL that allows users to add, manage, and view courses with a dynamic and responsive interface.              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                 <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(93, 38, 94, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(159, 35, 35, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >react</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(34, 211, 238, 0.2);
+                    color: var(--color-accent);
+                  "
+                  >MySQL</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                                  <a href="https://github.com/MatiullahZamarodi7/education-website-buy-react-rest-api">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                    
+                   <a href="https://github.com/MatiullahZamarodi7/education-website-buy-react-rest-api">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
              <!-- Project 2 -->
           <div class="project-card glass-panel overflow-hidden">
             <div
@@ -1202,7 +1778,7 @@
                 Todo List by php
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                عwith this website we can write our all task to we did or my we do
+                This PHP-based application supports complete CRUD functionality, allowing users to create, manage, update, and delete data through a clean and user-friendly interface.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1275,8 +1851,7 @@
                 Api by json-server dbms
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the dbms create by json-server this api this work just on your computer 
-                go to my git hub and take the files and roadmap for use this one on your self
+               This project is a responsive task management application built with Vanilla JavaScript and API integration, including an admin panel for managing tasks through full CRUD functionality.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1341,8 +1916,7 @@
                 calculator by js
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the calculator by js and simple for use 
-                go and use this this is simple for use 
+                This project is a lightweight and responsive calculator application built with Vanilla JavaScript capable of performing basic mathematical operations smoothly.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1386,6 +1960,62 @@
               </div>
             </div>
           </div>
+          <div class="project-card glass-panel overflow-hidden">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #0a1628, #1e3a5f)"
+            >
+              <span><i><img src="img/Calculator-react.png" alt=""></i></span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold mb-2 neon-text-gold">
+                calculator by React
+              </h3>
+              <p class="opacity-80 mb-4 text-sm">
+                This project is a lightweight and responsive calculator application built with react capable of performing basic mathematical operations smoothly.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(251, 191, 36, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >HTML CSS</span
+                >
+                 <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(93, 38, 94, 0.2);
+                    color: var(--color-primary);
+                  "
+                  >BootStrap</span
+                >
+                <span
+                  class="text-xs px-2 py-1 rounded-full"
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    color: var(--color-secondary);
+                  "
+                  >react</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-primary)"
+                >
+                                  <a href="https://github.com/MatiullahZamarodi7/calculator-by-React">View website →</a>
+                </button>
+                <button
+                  class="text-sm font-semibold hover-lift"
+                  style="color: var(--color-secondary)"
+                >
+                  <a href="https://github.com/MatiullahZamarodi7/calculator-by-React">GitHub →</a>
+                </button>
+              </div>
+            </div>
+          </div>
               <!-- Project 2 -->
           <div class="project-card glass-panel overflow-hidden">
             <div
@@ -1399,8 +2029,7 @@
                 Todo List by just js
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                عwith this website we can write our all task to we did or my we do for all day and month
-              </p>
+This JavaScript Todo List application supports creating, updating, deleting, and managing tasks through a clean and user-friendly interface.              </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="text-xs px-2 py-1 rounded-full"
@@ -1450,8 +2079,7 @@
                 MusicPlayer
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the musicPlayer we can lesten our fivorate musicPlayer in this player
-              </p>
+This project is a fully functional music player built with Vanilla JavaScript featuring play/pause controls, track navigation, and a smooth user experience.              </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="text-xs px-2 py-1 rounded-full"
@@ -1507,8 +2135,7 @@
                 MusicPlayer
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the musicPlayer we can lesten our fivorate musicPlayer in this player
-              </p>
+This project is a fully functional music player built with Vanilla JavaScript featuring play/pause controls, track navigation, and a smooth user experience.              </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="text-xs px-2 py-1 rounded-full"
@@ -1564,7 +2191,7 @@
                 Dinamic Clock
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the clock and this the local project this create with javascript
+                A responsive digital clock application developed using Vanilla JavaScript that displays real-time hours, minutes, and seconds with live updates.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1622,7 +2249,7 @@
                 payments Card
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the type of the payment card to we can pay for everything this use at bank ...
+               This project is a responsive payment card UI built with Bootstrap, featuring clean design, structured form fields, and modern user experience.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -1673,8 +2300,7 @@
                 Tempreture Changer
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this the Tempreture change this can change the farnHid to selsuse easy
-              </p>
+This project is a temperature conversion tool developed using JavaScript that allows users to convert between Celsius, Fahrenheit, and Kelvin with instant and accurate results.              </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="text-xs px-2 py-1 rounded-full"
@@ -1730,8 +2356,7 @@
                 clock
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the local clock and we can watch the own time in there
-              </p>
+A lightweight JavaScript project that dynamically displays and updates numbers in real-time with smooth UI interaction.              </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="text-xs px-2 py-1 rounded-full"
@@ -1788,8 +2413,7 @@
                 watchStore
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this is the watching store and we can take the clock and pay for that the most stor
-              </p>
+This project is a modern watch store website built using HTML, CSS, and JavaScript featuring product listing, responsive design, and a clean e-commerce interface.              </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="text-xs px-2 py-1 rounded-full"
@@ -1845,7 +2469,7 @@
                 the logging card
               </h3>
               <p class="opacity-80 mb-4 text-sm">
-                this the responsive logging page we use this in our websites
+               This is my first frontend project — a responsive profile card built with HTML and CSS demonstrating layout design and UI styling skills.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -2315,5 +2939,91 @@ setTimeout(typeEffect,speed);
 typeEffect();
     
          </script>
+
+
+
+
+         <!-- ------------------ -->
+            <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+   document.querySelectorAll(".swiper").forEach((el) => {
+  new Swiper(el, {
+    loop: true,
+
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: el.querySelector(".swiper-pagination"),
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: el.querySelector(".swiper-button-next"),
+      prevEl: el.querySelector(".swiper-button-prev"),
+    },
+  });
+});
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script>
+const btn = document.getElementById("downloadBtn");
+const checkbox = document.getElementById("downloadInput");
+
+let isDone = false;
+
+btn.addEventListener("click", function () {
+
+  if (isDone) return;
+
+  checkbox.checked = true;
+
+  // صبر تا پایان کل انیمیشن (نه یکی از آن‌ها)
+  const totalDuration = 3500; // از CSS تو: 3.5s
+
+  setTimeout(() => {
+
+    // علامت پایان UI
+    btn.classList.add("done");
+
+    // شروع دانلود فقط بعد از پایان کامل
+    const link = document.createElement("a");
+    link.href = "/img/CVofMatiullahZamarodi.pdf";
+    link.download = "CVofMatiullahZamarodi.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // ریست
+    setTimeout(() => {
+      checkbox.checked = false;
+      btn.classList.remove("done");
+      isDone = false;
+    }, 1000);
+
+  }, totalDuration);
+
+  isDone = true;
+});
+</script>
   </body>
 </html>
