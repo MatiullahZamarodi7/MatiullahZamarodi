@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "file": "c:\\Users\\X1\\Desktop\\protofolio\\protofolio-matiullah\\index.html",
+    "message": "at-rule or selector expected",
+    "line": 170,
+    "timestamp": "2026-05-09T12:51:17.777Z",
+    "solution": "",
+    "keep": true,
+    "resolved": false,
+    "tags": [],
+    "uniqueId": "moycephtcbx5wzj0v9q"
+  }
+]

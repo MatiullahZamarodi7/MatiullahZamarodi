@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta description="matiullah zamarodi" />
+    <meta property="og:image" content="img/me.jpg">
+<meta name="theme-color" content="#000000">
      <link rel="icon" type="img/jpg" href="img/me.jpg" />
     <title>Matiullah Zamarodi - مطیع الله زمردی</title>
     <!-- External Scripts and Fonts -->
@@ -16,10 +18,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
 
 
 
+
+<style>
+  .dots::after{
+    content: "";
+    animation: dots 2s steps(4, end) infinite;
+}
+
+@keyframes dots{
+    0%{
+        content: "";
+    }
+
+    25%{
+        content: ".";
+    }
+
+    50%{
+        content: "..";
+    }
+
+    75%{
+        content: "...";
+    }
+
+    100%{
+        content: ".....";
+    }
+}
+</style>
 
 
   <!-- Demo styles -->
@@ -157,7 +189,6 @@
 }
 
 
-
 /* ....................downloade cv............... */
 .container {
   padding: 0;
@@ -180,6 +211,11 @@
   transition: all 0.4s ease;
   padding: 5px;
   position: relative;
+}
+@media (max-width: 768px){
+    .label{
+        width: 100%;
+    }
 }
 
 .label::before {
@@ -453,7 +489,7 @@
       id="app-wrapper"
       class="h-full w-full flex flex-col items-center justify-center overflow-auto"
     >
-      <main class="text-center max-w-4xl w-full">
+       <main class="text-center max-w-4xl w-full">
         <div
           id="typewriter-container"
           class="inline-flex items-center justify-center gap-1 min-h-[1.5em] flex-wrap"
@@ -468,7 +504,7 @@
 
         <div
           id="icons-container"
-          class="flex justify-center gap-6 mt-12 opacity-0 transition-opacity duration-500"
+          class="flex justify-center gap-6  opacity-0 transition-opacity duration-500"
         >
           <i data-lucide="code-2" class="w-10 h-10"></i>
           <i data-lucide="zap" class="w-10 h-10"></i>
@@ -484,12 +520,14 @@
         >
           <span class="gradient-text animate-gradient" id="animation_2" >Matiullah Zamarodi</span>
         </h1>
+        
         <!-- Title with Typing Effect -->
         <div
           class="text-2xl md:text-3xl font-semibold mb-6 animate-fade-up"
         >
           <span id="heroTitle">Full Stack Developer</span>
         </div>
+       
         <!-- Subtitle -->
         <p
           class="text-xl md:text-2xl opacity-80 mb-10 max-w-2xl mx-auto animate-fade-up text-balance"
@@ -673,86 +711,51 @@
             </h3>
             <!-- Skill Items -->
             <div class="space-y-5">
-              <div class="skill-item">
-                <div class="flex justify-between mb-1">
-                  <span class="font-semibold">HTML5 / CSS3</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-primary)"
-                    >90%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="--fill-width: 90%; width: 90%"
-                  ></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="flex justify-between mb-1">
-                  <span class="font-semibold">BootStrap</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-primary)"
-                    >70%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="--fill-width: 70%; width: 70%"
-                  ></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="flex justify-between mb-1">
-                  <span class="font-semibold">JavaScript</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-primary)"
-                    >80%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="--fill-width: 80%; width: 80%"
-                  ></div>
-                </div>
-              </div>
                <div class="skill-item">
                 <div class="flex justify-between mb-1">
-                  <span class="font-semibold">React</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-primary)"
-                    >70%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="--fill-width: 70%; width: 70%"
-                  ></div>
+                  <span class="font-semibold">MTML5/CSS3</span>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">90</div>
+</div>
+               <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">BootStrap</span>
+
+                </div>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">70</div>
+</div>
+               <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">JavaScript</span>
+
+                </div>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">80</div>
+</div>
+                <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">React</span>
+
+                </div>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">70</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Tailwind CSS / SASS</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-primary)"
-                    >50%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="--fill-width: 50%; width: 50%"
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">30</div>
+</div>
             </div>
           </div>
           <!-- Backend Skills -->
@@ -767,122 +770,49 @@
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">PHP</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >80%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 80%;
-                      width: 80%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">80</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Laravel</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >80%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 80%;
-                      width: 80%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
-                  <span class="font-semibold">MySQL</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >85%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 85%;
-                      width: 85%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+                  <span class="font-semibold">MYSQL</span>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%">85</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Java</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >40%</span
-                  >
+
                 </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 40%;
-                      width: 40%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-semibold">Python</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >30%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 30%;
-                      width: 30%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
-                
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">30</div>
+</div>
+ <div class="skill-item">
+                <div class="flex justify-between mb-1">
+                  <span class="font-semibold">Pytone</span>
+
+                </div>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%">40</div>
+</div>
+
             </div>
           </div>
         <!-- networks -->
@@ -894,125 +824,51 @@
               <span class="neon-text-purple nav-link">Network Development</span>
             </h3>
             <div class="space-y-5">
-              <div class="skill-item">
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Fundamentals of network</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >100%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 100%;
-                      width: 100%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="flex justify-between mb-1">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%">100</div>
+</div>
+               <div class="skill-item">
+                <div class="flex justify-between mb-1">
                   <span class="font-semibold">A+</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >80%</span
-                  >
+
                 </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 80%;
-                      width: 80%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
-              <div class="skill-item">
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">80</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Natwork +</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >100%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 100%;
-                      width: 100%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%">100</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">CCNA</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >80%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 80%;
-                      width: 80%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">80</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">CCNP</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >40%</span
-                  >
+
                 </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 40%;
-                      width: 40%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
-                
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%">40</div>
+</div>
             </div>
           </div>
           <!-- security -->
@@ -1027,99 +883,39 @@
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Linux</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >30%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 30%;
-                      width: 30%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">30</div>
+</div>
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Security +</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >60%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 60%;
-                      width: 60%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%">60</div>
+</div>
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Linux Essintional</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >90%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 90%;
-                      width: 90%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">90</div>
+</div>
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">LPIC 1</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >40%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 40%;
-                      width: 40%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%">40</div>
+</div>
                 </div>
                 
               </div>
@@ -1135,122 +931,48 @@
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Windows</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >85%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 85%;
-                      width: 85%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="flex justify-between mb-1">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%">85</div>
+</div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-1">
                   <span class="font-semibold">Word</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >95%</span
-                  >
+
                 </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 95%;
-                      width: 95%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%">95</div>
+</div>
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Exel</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >80%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 80%;
-                      width: 80%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">80</div>
+</div>
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">power Point</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >90%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 90%;
-                      width: 90%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">90</div>
+</div>
               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Access</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >40%</span
-                  >
+
                 </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 40%;
-                      width: 40%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
-                
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%">40</div>
+</div>
             </div>
           </div>
            <!-- Graphices Design -->
@@ -1262,100 +984,42 @@
               <span class="neon-text-purple nav-link">Graphices Design </span>
             </h3>
             <div class="space-y-5">
-              <div class="skill-item">
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">PhotoShap</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >70%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 70%;
-                      width: 70%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="flex justify-between mb-1">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">70</div>
+</div>
+               <div class="skill-item">
+                <div class="flex justify-between mb-1">
                   <span class="font-semibold">CoralDrow</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >30%</span
-                  >
+
                 </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 30%;
-                      width: 30%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
-                </div>
-              <div class="skill-item">
+              </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">30</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Dia</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >80%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 80%;
-                      width: 80%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
-              <div class="skill-item">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">80</div>
+</div>
+               <div class="skill-item">
                 <div class="flex justify-between mb-1">
                   <span class="font-semibold">Packit Trecer</span>
-                  <span
-                    class="font-mono text-sm"
-                    style="color: var(--color-secondary)"
-                    >70%</span
-                  >
-                </div>
-                <div class="skill-bar-container">
-                  <div
-                    class="skill-bar"
-                    style="
-                      --fill-width: 70%;
-                      width: 70%;
-                      background: linear-gradient(
-                        90deg,
-                        var(--color-secondary),
-                        var(--color-pink)
-                      );
-                    "
-                  ></div>
+
                 </div>
               </div>
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">70</div>
+</div>
             </div>
           </div>
             </div>
@@ -2703,11 +2367,12 @@ This project is a modern watch store website built using HTML, CSS, and JavaScri
                   <span class="text-xl">💼</span>
                 </div>
                 <div>
-                  <p class="text-sm opacity-70">Status</p>
-                  <p class="font-semibold" style="color: var(--color-success)">
-                    studing right now.....
-                  </p>
-                </div>
+  <p class="text-sm opacity-70">Status</p>
+
+  <p class="font-semibold" style="color: var(--color-success)">
+    studing right now<span class="dots"></span>
+  </p>
+</div>
               </div>
                  <div class="flex items-center gap-4">
                 <div
@@ -2716,11 +2381,12 @@ This project is a modern watch store website built using HTML, CSS, and JavaScri
                   <span class="text-xl">📚</span>
                 </div>
                 <div>
-                  <p class="text-sm opacity-70">study position</p>
-                  <p class="font-semibold" style="color: var(--color-success)">
-                    self study .....
-                  </p>
-                </div>
+  <p class="text-sm opacity-70">Study position</p>
+
+  <p class="font-semibold" style="color: var(--color-success)">
+    self study new<span class="dots"></span>
+  </p>
+</div>
               </div>
             </div>
             <!-- Social Links -->
@@ -2844,8 +2510,8 @@ This project is a modern watch store website built using HTML, CSS, and JavaScri
       const messages = [
 '<Active/>',
 '<Full-Stack-Developer/>',
-'<frontend/>',
-'<Backend/>',
+'<front-end/>',
+'<Back-end/>',
 '<Z9-GPS/>',
 '<Coding.../>',
 '<hellow world/>'
@@ -2993,7 +2659,6 @@ const checkbox = document.getElementById("downloadInput");
 let isDone = false;
 
 btn.addEventListener("click", function () {
-
   if (isDone) return;
 
   checkbox.checked = true;
@@ -3026,5 +2691,6 @@ btn.addEventListener("click", function () {
   isDone = true;
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
